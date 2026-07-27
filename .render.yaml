@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: whatsapp-webhook
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: VERIFY_TOKEN
+        sync: false
+      - key: WHATSAPP_TOKEN
+        sync: false
+      - key: PHONE_NUMBER_ID
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
